@@ -9,12 +9,13 @@ import seaborn as sns
 # Chargement des données
 data = pd.read_csv('Marine_Fish_Data.csv')
 
+
 # Exploration initiale
 print("Aperçu des données :")
 print(data.head())
 
 # Sélection des colonnes pertinentes
-selected_features = ['Water_Temperature', 'Pollution_Level', 'Region']
+selected_features = ['Water_Temperature(C)', 'Water_Pollution_Level', 'Region']
 data = data[selected_features]
 
 # Vérification des valeurs manquantes
@@ -30,14 +31,24 @@ data['Region'] = data['Region'].astype('category').cat.codes
 # Normalisation des données pour le clustering
 
 scaler = StandardScaler()
-scaled_data = scaler.fit_transform(data)
+# scaled_data = scaler.fit_transform(data)
+
+# Conversion des niveaux de pollution en valeurs numériques
+pollution_mapping = {'Low': 1, 'Medium': 2, 'High': 3}
+data['Water_Pollution_Level'] = data['Water_Pollution_Level'].map(pollution_mapping)
+
+# Vérifier si toutes les valeurs ont été correctement converties
+print(data.head())
+
+# Normalisation des données pour le clustering
+scaled_data = scaler.fit_transform(data[['Water_Temperature(C)', 'Water_Pollution_Level', 'Region']])
 
 # Clustering avec K-Means
 kmeans = KMeans(n_clusters=3, random_state=42)
 data['Cluster'] = kmeans.fit_predict(scaled_data)
 
 # Visualisation des clusters
-sns.scatterplot(x=data['Water_Temperature'], y=data['Pollution_Level'], hue=data['Cluster'])
+sns.scatterplot(x=data['Water_Temperature(C)'], y=data['Water_Pollution_Level'], hue=data['Cluster'])
 plt.title('Clusters en fonction de la température et de la pollution')
 plt.xlabel('Température de l\'eau')
 plt.ylabel('Niveau de pollution')

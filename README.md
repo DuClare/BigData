@@ -22,3 +22,13 @@ When we received this dataset, we encountered several issues:
 - Added new calculated columns, such as:
   - **TCO** (Total Consumption Over Time) to provide a cumulative view of energy usage.
   - **Production** to aggregate energy production from various sources for a more comprehensive analysis.
+
+## Data Mining
+
+In the data mining phase, we leveraged advanced techniques to uncover meaningful insights from the dataset. 
+
+- **Clustering Analysis**: Using KMeans, we grouped French regions based on energy metrics, revealing distinct profiles such as renewable-heavy producers and consumption-dependent regions. 
+- **Outlier Detection**: Anomalies in energy production and consumption were identified, uncovering unusual patterns tied to regional or seasonal factors. 
+- **Predictive Modeling**: We built a robust LightGBM-based model to forecast energy consumption with high accuracy, highlighting key predictors like production metrics and temporal features. 
+
+These analyses provide actionable insights to support efficient energy management and informed policy-making.

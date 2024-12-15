@@ -24,55 +24,28 @@ When we received this dataset, we encountered several issues:
   - **Production** to aggregate energy production from various sources for a more comprehensive analysis.
 
 ## Data Analysis
-### Overview
 
-The eco2mix dataset offers a unique opportunity to explore France's energy landscape by analyzing regional and temporal variations in energy production and consumption. Our data analysis focused on uncovering key insights related to energy trends, seasonal fluctuations, and the role of renewable energy.
-### Key Analyses and Findings
-1. Monthly Energy Production and Consumption Trends
+In the data analysis phase, we explored the **eco2mix** dataset to uncover patterns and trends in energy production and consumption across France.
 
-  - Aggregated energy production and consumption data by month and region, measured in GWh.
-  - Identified seasonal trends: production consistently exceeds consumption, with peak periods observed during winter months.
-  - Certain regions, like Auvergne-Rhône-Alpes and Normandie, emerge as energy exporters, while others, like Île-de-France, depend on imports to meet their needs.
+- **Seasonal Trends**:  
+  Monthly energy production and consumption were analyzed, revealing:  
+  - Peak consumption during winter months and holidays.  
+  - Consistently higher production than consumption.  
 
-2. Regional Energy Distribution
+- **Regional Disparities**:  
+  - **Exporters**: Regions like **Auvergne-Rhône-Alpes** and **Normandie** produce more energy than they consume.  
+  - **Importers**: Regions such as **Île-de-France** and **Provence-Alpes-Côte d’Azur** rely heavily on imports.  
 
-  - Bar charts of production and consumption highlighted disparities between regions:
+- **Renewable Energy**:  
+  - Identified the first day each year (2013–2021) when cumulative renewable production surpassed consumption.  
+  - Renewable sources contributed 25–33% of total annual production.  
 
-    1. Regions with industrial infrastructure produce significantly more energy than they consume.
-    2.  Dense metropolitan regions exhibit high consumption but lower production capabilities.
+- **Source Variability**:  
+  Violin plots highlighted differences in energy production:  
+  - **Stable**: Nuclear and thermal energy provide consistent baseloads.  
+  - **Variable**: Wind and solar depend heavily on weather conditions.  
 
-3. Daily Energy Consumption Patterns
-
-  - Time-series analysis of daily energy consumption revealed:
-
-    1. Peaks during winter and end-of-year holidays, driven by increased heating needs.
-    2. Rolling monthly averages demonstrated gradual consumption trends over time.
-
-4. Top Consumption Variations
-
-  - Highlighted the 20 days with the largest day-to-day changes in energy consumption.
-  - Observed that the most significant variations align with seasonal transitions and major national events.
-
-5. Renewable Energy Surpass Analysis
-
-  - Determined the first day each year (2013–2021) when cumulative renewable energy production surpassed consumption.
-  - Renewable sources accounted for 25–33% of total energy production annually, with nuclear energy being a dominant contributor.
-
-6. Energy Source Distributions
-
-- Violin plots visualized the variability of energy production by source:
-
-  1. Thermal and nuclear sources showed consistent high output, indicative of their role as baseload energy providers.
-  2. Wind and solar production exhibited variability, reflecting their dependence on weather conditions.
-  3. Hydraulic energy demonstrated a broad range, influenced by seasonal water availability.
-
-### Visualizations
-
-We created various visualizations to support our findings, including:
-- Line plots for monthly trends.
-- Bar charts comparing regional production and consumption.
-- Time-series plots of daily consumption patterns.
-- Violin plots showing energy source variability.
+This analysis offers actionable insights for optimizing energy distribution, increasing renewable investments, and preparing for seasonal demand spikes.
 
 ## Data Mining
 
